@@ -1,19 +1,19 @@
 -- schema.sql
 
-CREATE TABLE livre (
+CREATE TABLE IF NOT EXISTS livre (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titre TEXT NOT NULL,
     auteur TEXT NOT NULL,
-    disponible BOOLEAN NOT NULL,
+    disponible BOOLEAN NOT NULL
 );
 
-CREATE TABLE utilisateur (
+CREATE TABLE IF NOT EXISTS utilisateur (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom TEXT NOT NULL,
-    prenom TEXT NOT NULL,
+    prenom TEXT NOT NULL
 );
 
-CREATE TABLE emprunts (
+CREATE TABLE IF NOT EXISTS emprunts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     livre_id INTEGER NOT NULL,
     utilisateur_id INTEGER NOT NULL,
